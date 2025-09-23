@@ -134,7 +134,7 @@ def forecast_requirements(monthly_req_df, months_ahead=6):
 # --- Dashboard ---
 def main():
     st.title("HR Analytics Dashboard - Madre Integrated Engineering")
-    st.markdown("An interactive and actionable dashboard to monitor HR performance and client needs.")
+    st.markdown("A dashboard to monitor the HR performance.")
 
     uploaded_file = st.file_uploader("Upload your Excel file", type=["xlsx", "xls"])
     df = load_and_process_data(uploaded_file)
@@ -276,6 +276,10 @@ def main():
         file_name=f"hr_data_{datetime.now().strftime('%Y%m%d')}.csv",
         mime="text/csv"
     )
+
+# Footer with company link
+MADRE_WEBSITE = "https://www.madre-me.com/"
+    st.markdown(f'<div style="text-align:center; color:#56738a; padding-top:16px;">Powered for <b>Madre Integrated Engineering</b> — <a href="{MADRE_WEBSITE}" target="_blank">madre-me.com</a></div>', unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
