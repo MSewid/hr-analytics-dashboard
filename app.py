@@ -16,16 +16,16 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# --- Clean Professional Theme ---
+# --- Ocean Theme ---
 st.markdown("""
     <style>
     .stApp {
         background-color: #ffffff;
-        color: #2c3e50;
+        color: #0f172a;
     }
     h1, h2, h3, h4 {
-        color: #2c3e50;
-        font-family: 'Segoe UI', sans-serif;
+        color: #0077b6;
+        font-family: sans-serif;
     }
     .logo-container {
         display: flex;
@@ -38,17 +38,21 @@ st.markdown("""
         margin-bottom: 2rem;
     }
     .stMetric {
-        background: #f8f9fa;
+        background: #f1f5f9;
         padding: 1rem;
         border-radius: 8px;
-        border: 1px solid #e9ecef;
+        border: 1px solid #e2e8f0;
     }
     .stPlotlyChart {
+        background: #ffffff;
         border-radius: 8px;
-        border: 1px solid #e9ecef;
+        border: 1px solid #e2e8f0;
     }
     .sidebar .stSelectbox > div > div {
-        background-color: white;
+        background-color: #ffffff;
+    }
+    .sidebar {
+        background-color: #f1f5f9;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -234,7 +238,7 @@ def main():
             
             fig = px.line(monthly, x="Month", y="Utilization", 
                          title="Bandwidth Utilization Over Time")
-            fig.update_traces(line_color='#2c3e50')
+            fig.update_traces(line_color='#0077b6')
             st.plotly_chart(fig, use_container_width=True)
 
     with col2:
@@ -243,7 +247,7 @@ def main():
         if not filled.empty and "Days Open" in df.columns:
             fig = px.histogram(filled, x="Days Open", nbins=20, 
                              title="Time to Fill Distribution")
-            fig.update_traces(marker_color='#2c3e50')
+            fig.update_traces(marker_color='#0077b6')
             st.plotly_chart(fig, use_container_width=True)
 
     col3, col4 = st.columns(2)
@@ -254,7 +258,7 @@ def main():
         if not open_reqs.empty and "Days Open" in df.columns:
             fig = px.box(open_reqs, y="Days Open", 
                         title="Aging of Open Requirements")
-            fig.update_traces(marker_color='#2c3e50')
+            fig.update_traces(marker_color='#0077b6')
             st.plotly_chart(fig, use_container_width=True)
 
     with col4:
@@ -267,7 +271,7 @@ def main():
             
             fig = px.bar(conv, x="HR", y="Conversion Rate", 
                         title="Conversion Rate by HR")
-            fig.update_traces(marker_color='#2c3e50')
+            fig.update_traces(marker_color='#0077b6')
             st.plotly_chart(fig, use_container_width=True)
 
     # Frequent Requirements
@@ -278,7 +282,7 @@ def main():
         
         fig = px.bar(freq, x="Designation", y="Req", 
                     title="Top 10 Most Requested Positions")
-        fig.update_traces(marker_color='#2c3e50')
+        fig.update_traces(marker_color='#0077b6')
         fig.update_xaxes(tickangle=45)
         st.plotly_chart(fig, use_container_width=True)
 
@@ -293,7 +297,7 @@ def main():
             
             fig = px.bar(client_req, x="Client", y="Req", 
                         title="Top Clients by Requirements")
-            fig.update_traces(marker_color='#2c3e50')
+            fig.update_traces(marker_color='#0077b6')
             fig.update_xaxes(tickangle=45)
             st.plotly_chart(fig, use_container_width=True)
 
@@ -304,7 +308,7 @@ def main():
             
             fig = px.bar(client_aging, x="Client", y="Days Open", 
                         title="Average Processing Time by Client")
-            fig.update_traces(marker_color='#6c757d')
+            fig.update_traces(marker_color='#64748b')
             fig.update_xaxes(tickangle=45)
             st.plotly_chart(fig, use_container_width=True)
 
