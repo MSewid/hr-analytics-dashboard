@@ -245,7 +245,7 @@ def main():
             st.plotly_chart(fig, use_container_width=True)
 
     # --- Forecasting ---
-    st.subheader("Predictive Modeling: Forecast Future Requirements")
+    st.subheader("Forecasting Future Requirements")
     if "Month" in df.columns and "Req" in df.columns:
         monthly_req = df.groupby("Month").agg({"Req": "sum"}).reset_index()
         forecast_df = forecast_requirements(monthly_req, months_ahead=6)
@@ -279,7 +279,7 @@ def main():
 
 # Footer with company link
 MADRE_WEBSITE = "https://www.madre-me.com/"
-    st.markdown(f'<div style="text-align:center; color:#56738a; padding-top:16px;">Powered for <b>Madre Integrated Engineering</b> — <a href="{MADRE_WEBSITE}" target="_blank">madre-me.com</a></div>', unsafe_allow_html=True)
+st.markdown(f'<div style="text-align:center; color:#56738a; padding-top:16px;">Powered for <b>Madre Integrated Engineering</b> — <a href="{MADRE_WEBSITE}" target="_blank">madre-me.com</a></div>', unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
