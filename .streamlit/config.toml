@@ -1,0 +1,6 @@
+[theme]
+primaryColor = "#0077b6"          # Deep ocean blue
+backgroundColor = "#ffffff"       # White background for clarity
+secondaryBackgroundColor = "#f1f5f9"  # Light grey / very light blue background
+textColor = "#0f172a"             # Dark navy/grey text for readability
+font = "sans serif"
