@@ -1,0 +1,6 @@
+[theme]
+primaryColor = "#4682B4"        # Blue for buttons, sliders, highlights
+backgroundColor = "#D3D3D3"     # Light gray for main background
+secondaryBackgroundColor = "#ADD8E6"  # Light blue for secondary elements
+textColor = "#00008B"           # Dark blue for text
+font = "sans serif"             # Clean, modern font
