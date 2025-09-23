@@ -277,9 +277,9 @@ def main():
         mime="text/csv"
     )
 
-# Footer with company link
-MADRE_WEBSITE = "https://www.madre-me.com/"
-st.markdown(f'<div style="text-align:center; color:#56738a; padding-top:16px;">Powered for <b>Madre Integrated Engineering</b> — <a href="{MADRE_WEBSITE}" target="_blank">madre-me.com</a></div>', unsafe_allow_html=True)
+    # Footer with company link
+    MADRE_WEBSITE = "https://www.madre-me.com/"
+    st.markdown(f'<div style="text-align:center; color:#56738a; padding-top:16px;">Powered for <b>Madre Integrated Engineering</b> - <a href="{MADRE_WEBSITE}" target="_blank">madre-me.com</a></div>', unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
